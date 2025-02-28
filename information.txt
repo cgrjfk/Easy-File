@@ -1,0 +1,17 @@
+EncryptionHandlerBase 抽象文件加密类
+             |
+             |
+          |     |
+        |           |
+      |                  |
+AESEncryptionHandler   RSAEncryptionHandler
+AESEncryptionHandler加密类:使用AES加密，继承EncryptionHandlerBase
+RSAEncryptionHandler加密类:使用RSA加密，继承EncryptionHandlerBase
+EncryptionHandlerFactory:文件加密工厂类，调用AESEncryptionHandler，RSAEncryptionHandler加密类
+使用工厂模式
+GUI类:调用EncryptionHandlerFactory类 创建文件加密类的接口
+类所处的文件地址:
+EncryptionHandlerBase--->AbsEncryption.py
+AESEncryptionHandler加密类--->AES
+RSAEncryptionHandler加密类---->RSA
+EncryptionHandlerFactory----->EncryptionFactory.py
